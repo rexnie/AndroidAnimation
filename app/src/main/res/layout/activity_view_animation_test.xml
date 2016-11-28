@@ -47,4 +47,12 @@
         android:text="ScaleRelativeSelf"
         android:textAllCaps="false"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_animation_set"
+        android:text="AnimationSet"
+        android:textAllCaps="false"/>
+
+
 </LinearLayout>

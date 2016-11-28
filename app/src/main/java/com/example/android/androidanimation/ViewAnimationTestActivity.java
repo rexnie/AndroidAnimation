@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
@@ -23,6 +24,7 @@ public class ViewAnimationTestActivity extends AppCompatActivity
         findViewById(R.id.btn_translate_animation).setOnClickListener(this);
         findViewById(R.id.btn_scale_animation).setOnClickListener(this);
         findViewById(R.id.btn_scale_animation_rel).setOnClickListener(this);
+        findViewById(R.id.btn_animation_set).setOnClickListener(this);
     }
     
     @Override
@@ -63,6 +65,20 @@ public class ViewAnimationTestActivity extends AppCompatActivity
                         Animation.RELATIVE_TO_SELF, 0.3f);
                 sa2.setDuration(3000);
                 v.startAnimation(sa2);
+                break;
+            case R.id.btn_animation_set:
+                AnimationSet as = new AnimationSet(true);
+
+                AlphaAnimation aa2 = new AlphaAnimation(0, 1);
+                //aa2.setDuration(3000); //好像没有效果，TODO check
+                as.addAnimation(aa2);
+
+                TranslateAnimation ta2 = new TranslateAnimation(0, 200, 0, 300);
+                //ta2.setDuration(3000); //好像没有效果，TODO check
+                as.addAnimation(ta2);
+
+                as.setDuration(3000);
+                v.startAnimation(as);
                 break;
             default:
                 Log.e(TAG, "onClick: ");

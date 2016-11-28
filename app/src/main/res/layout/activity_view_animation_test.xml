@@ -19,4 +19,32 @@
         android:text="Rotate"
         android:textAllCaps="false"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_rotate_animation_rel"
+        android:text="RotateRelativeSelf"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_translate_animation"
+        android:text="Translate"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_scale_animation"
+        android:text="Scale"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_scale_animation_rel"
+        android:text="ScaleRelativeSelf"
+        android:textAllCaps="false"/>
+
 </LinearLayout>

@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".ViewAnimationTestActivity">
         </activity>
+        <activity android:name=".PropertyAnimationActivity">
+        </activity>
     </application>
 
 </manifest>

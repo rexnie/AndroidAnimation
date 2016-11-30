@@ -31,7 +31,7 @@ public class ViewAnimationTestActivity extends AppCompatActivity
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_alpha_animation:
-                AlphaAnimation aa = new AlphaAnimation(0, 1);
+                AlphaAnimation aa = new AlphaAnimation(0, 0.4f);
                 aa.setDuration(3000);
                 v.startAnimation(aa);
                 break;

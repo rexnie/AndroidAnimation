@@ -12,4 +12,39 @@
         android:text="ObjectTranslateXY"
         android:textAllCaps="false"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_object_animator_rotation"
+        android:text="ObjectRotation"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_object_animator_rotation_x"
+        android:text="ObjectRotationX"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_object_animator_scale_x"
+        android:text="ObjectScaleX"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_object_animator_x"
+        android:text="ObjectX"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_object_animator_alpha"
+        android:text="ObjectAlpha"
+        android:textAllCaps="false"/>
+
 </LinearLayout>

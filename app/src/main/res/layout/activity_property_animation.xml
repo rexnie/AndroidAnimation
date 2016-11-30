@@ -54,4 +54,10 @@
         android:text="ObjectPropertyValuesHolder"
         android:textAllCaps="false"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_value_animator"
+        android:text="ValueAnimator"
+        android:textAllCaps="false"/>
 </LinearLayout>

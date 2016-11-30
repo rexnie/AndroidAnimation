@@ -1,7 +1,9 @@
 package com.example.android.androidanimation;
 
+import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,6 +24,7 @@ public class PropertyAnimationActivity extends AppCompatActivity
         findViewById(R.id.btn_object_animator_x).setOnClickListener(this);
         findViewById(R.id.btn_object_animator_alpha).setOnClickListener(this);
         findViewById(R.id.btn_object_animator_property_value_holder).setOnClickListener(this);
+        findViewById(R.id.btn_value_animator).setOnClickListener(this);
     }
 
     @Override
@@ -70,6 +73,42 @@ public class PropertyAnimationActivity extends AppCompatActivity
 
                 ObjectAnimator.ofPropertyValuesHolder(v, pvh1, pvh2, pvh3)
                         .setDuration(3000).start();
+                break;
+            case R.id.btn_value_animator:
+                ValueAnimator va = ValueAnimator.ofFloat(0, 100);
+                va.setTarget(v);
+                va.setDuration(3000);
+                va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    int i = 0;
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        Float value = (Float) animation.getAnimatedValue();
+                        Log.d(TAG, "onAnimationUpdate: value=" + value + ",i=" + i);
+                        i++;
+                    }
+                });
+                va.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        Log.d(TAG, "onAnimationStart: ");
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        Log.d(TAG, "onAnimationEnd: ");
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                        Log.d(TAG, "onAnimationCancel: ");
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+                        Log.d(TAG, "onAnimationRepeat: ");
+                    }
+                });
+                va.start();
                 break;
             default:
                 Log.e(TAG, "onClick: unknown id");

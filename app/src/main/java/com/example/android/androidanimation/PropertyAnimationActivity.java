@@ -1,6 +1,7 @@
 package com.example.android.androidanimation;
 
 import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
@@ -25,6 +26,7 @@ public class PropertyAnimationActivity extends AppCompatActivity
         findViewById(R.id.btn_object_animator_alpha).setOnClickListener(this);
         findViewById(R.id.btn_object_animator_property_value_holder).setOnClickListener(this);
         findViewById(R.id.btn_value_animator).setOnClickListener(this);
+        findViewById(R.id.btn_animator_set).setOnClickListener(this);
     }
 
     @Override
@@ -109,6 +111,22 @@ public class PropertyAnimationActivity extends AppCompatActivity
                     }
                 });
                 va.start();
+                break;
+            case R.id.btn_animator_set:
+                ObjectAnimator oa1 = ObjectAnimator.ofFloat(v, "translationX", 300f);
+                ObjectAnimator oa2 = ObjectAnimator.ofFloat(v, "scaleX", 1f, 0, 1f);
+                ObjectAnimator oa3 = ObjectAnimator.ofFloat(v, "scaleY", 1f, 0, 1f);
+                AnimatorSet as = new AnimatorSet();
+                as.setDuration(3000);
+                // play all together
+                //as.playTogether(oa1, oa2, oa3);
+
+                // play sequentially with 3000 duration each
+                //as.playSequentially(oa1, oa2, oa3);
+
+                // oa1--> oa2 + oa3
+                as.play(oa2).with(oa3).after(oa1);
+                as.start();
                 break;
             default:
                 Log.e(TAG, "onClick: unknown id");

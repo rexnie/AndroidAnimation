@@ -1,8 +1,9 @@
 package com.example.android.androidanimation;
 
 import android.animation.ObjectAnimator;
-import android.support.v7.app.AppCompatActivity;
+import android.animation.PropertyValuesHolder;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
@@ -20,6 +21,7 @@ public class PropertyAnimationActivity extends AppCompatActivity
         findViewById(R.id.btn_object_animator_scale_x).setOnClickListener(this);
         findViewById(R.id.btn_object_animator_x).setOnClickListener(this);
         findViewById(R.id.btn_object_animator_alpha).setOnClickListener(this);
+        findViewById(R.id.btn_object_animator_property_value_holder).setOnClickListener(this);
     }
 
     @Override
@@ -60,6 +62,14 @@ public class PropertyAnimationActivity extends AppCompatActivity
                         new float[] {0.2f, 0.4f, 0.6f});
                 oaf.setDuration(3000);
                 oaf.start();
+                break;
+            case R.id.btn_object_animator_property_value_holder:
+                PropertyValuesHolder pvh1 = PropertyValuesHolder.ofFloat("translationX", 300f);
+                PropertyValuesHolder pvh2 = PropertyValuesHolder.ofFloat("scaleX", 1f, 0, 1f);
+                PropertyValuesHolder pvh3 = PropertyValuesHolder.ofFloat("scaleY", 1f, 0, 1f);
+
+                ObjectAnimator.ofPropertyValuesHolder(v, pvh1, pvh2, pvh3)
+                        .setDuration(3000).start();
                 break;
             default:
                 Log.e(TAG, "onClick: unknown id");

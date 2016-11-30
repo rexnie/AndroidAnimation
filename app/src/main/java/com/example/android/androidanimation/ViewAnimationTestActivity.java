@@ -7,9 +7,11 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
+import android.view.animation.LayoutAnimationController;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
+import android.widget.LinearLayout;
 
 public class ViewAnimationTestActivity extends AppCompatActivity
         implements View.OnClickListener {
@@ -25,6 +27,16 @@ public class ViewAnimationTestActivity extends AppCompatActivity
         findViewById(R.id.btn_scale_animation).setOnClickListener(this);
         findViewById(R.id.btn_scale_animation_rel).setOnClickListener(this);
         findViewById(R.id.btn_animation_set).setOnClickListener(this);
+
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.ll);
+        ScaleAnimation sa = new ScaleAnimation(0, 1, 0, 1);
+        sa.setDuration(2000);
+        //第二个参数 delay 是指每个子View之间的delay, in second
+        LayoutAnimationController lac = new LayoutAnimationController(sa, 0.3f);
+        lac.setOrder(LayoutAnimationController.ORDER_NORMAL);
+        //lac.setOrder(LayoutAnimationController.ORDER_RANDOM);
+        //lac.setOrder(LayoutAnimationController.ORDER_REVERSE);
+        linearLayout.setLayoutAnimation(lac);
     }
     
     @Override

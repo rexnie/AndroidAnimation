@@ -1,6 +1,7 @@
 package com.example.android.androidanimation;
 
 import android.animation.Animator;
+import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
@@ -27,6 +28,7 @@ public class PropertyAnimationActivity extends AppCompatActivity
         findViewById(R.id.btn_object_animator_property_value_holder).setOnClickListener(this);
         findViewById(R.id.btn_value_animator).setOnClickListener(this);
         findViewById(R.id.btn_animator_set).setOnClickListener(this);
+        findViewById(R.id.btn_animator_in_xml).setOnClickListener(this);
     }
 
     @Override
@@ -127,6 +129,11 @@ public class PropertyAnimationActivity extends AppCompatActivity
                 // oa1--> oa2 + oa3
                 as.play(oa2).with(oa3).after(oa1);
                 as.start();
+                break;
+            case R.id.btn_animator_in_xml:
+                Animator a = AnimatorInflater.loadAnimator(this, R.animator.scalex);
+                a.setTarget(v);
+                a.start();
                 break;
             default:
                 Log.e(TAG, "onClick: unknown id");

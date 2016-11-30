@@ -67,4 +67,11 @@
         android:id="@+id/btn_animator_set"
         android:text="AnimatorSet"
         android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_animator_in_xml"
+        android:text="AnimatorInXml"
+        android:textAllCaps="false"/>
 </LinearLayout>

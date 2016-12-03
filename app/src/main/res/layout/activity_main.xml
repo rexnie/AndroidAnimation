@@ -57,4 +57,12 @@
             android:id="@+id/btn_svg_search_bar"/>
     </LinearLayout>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="灵动菜单"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:id="@+id/btn_animation_sample_menu"/>
+
 </LinearLayout>

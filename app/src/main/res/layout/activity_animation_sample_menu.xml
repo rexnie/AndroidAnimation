@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/iv_app"
+        android:layout_centerInParent="true"
+        android:src="@drawable/app"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:id="@+id/iv_map_location"
+        android:layout_centerInParent="true"
+        android:src="@drawable/map_location"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:id="@+id/iv_music"
+        android:layout_centerInParent="true"
+        android:src="@drawable/music"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:id="@+id/iv_camera"
+        android:layout_centerInParent="true"
+        android:src="@drawable/camera"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:id="@+id/iv_setting"
+        android:layout_centerInParent="true"
+        android:src="@drawable/setting"/>
+
+</RelativeLayout>

@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".SVGTestActivity">
         </activity>
+        <activity android:name=".AnimationSampleMenuActivity">
+        </activity>
     </application>
 
 </manifest>

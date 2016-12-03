@@ -26,4 +26,35 @@
         android:textAllCaps="false"
         android:layout_gravity="center"
         android:id="@+id/btn_customer_animation"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SVGTwoPath"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:id="@+id/btn_svg_2path"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SVGSunEarthMoon"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:id="@+id/btn_svg_sun_earth_moon"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SVGSearchBar"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:id="@+id/btn_svg_search_bar"/>
+    </LinearLayout>
+
 </LinearLayout>

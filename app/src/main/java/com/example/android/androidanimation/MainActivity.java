@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_view_animation).setOnClickListener(this);
         findViewById(R.id.btn_property_animation).setOnClickListener(this);
         findViewById(R.id.btn_customer_animation).setOnClickListener(this);
+        findViewById(R.id.btn_svg_2path).setOnClickListener(this);
+        findViewById(R.id.btn_svg_sun_earth_moon).setOnClickListener(this);
+        findViewById(R.id.btn_svg_search_bar).setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +39,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_customer_animation:
                 CustomerAnimation ca = new CustomerAnimation();
                 v.startAnimation(ca);
+                break;
+            case R.id.btn_svg_2path:
+            case R.id.btn_svg_sun_earth_moon:
+            case R.id.btn_svg_search_bar:
+                startActivity(new Intent(this, SVGTestActivity.class));
                 break;
             default:
                 Log.e(TAG, "onClick: unknown id");

@@ -65,4 +65,12 @@
         android:layout_gravity="center"
         android:id="@+id/btn_animation_sample_menu"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="计时器动画"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:id="@+id/btn_value_animator_sample"/>
+
 </LinearLayout>
